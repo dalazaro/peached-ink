@@ -1,0 +1,6 @@
+First name: <%= @user.first_name %><br>
+Last name: <%= @user.last_name %><br>
+Email: <%= @user.email_address %><br>
+Bio: <%= @user.bio %><br>
+Artist Statement: <%= @user.artist_statement %><br>
+<%= button_to "Edit Profile", edit_user_path(@user.username), method: :get %>
