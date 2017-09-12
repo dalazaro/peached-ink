@@ -1,0 +1,9 @@
+<h1>Collections</h1>
+
+<%= button_to "New Collection", new_collection_path, method: :get %><br>
+<% @collections.each do |collection| %>
+  <li>
+    <%= link_to collection.name, collection_path(collection.id) %><br>
+    <%= collection.description %>
+  </li>
+<% end %>

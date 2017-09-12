@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  # method for splash page
-  def splash
+  # root to: 'application#home'
+  def home
     render('../views/home')
   end
 
