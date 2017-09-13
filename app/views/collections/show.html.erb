@@ -1,6 +1,8 @@
 <h1><%= @collection.name %></h1>
 <h2><%= @collection.description %></h2>
 
-<%= button_to "Edit", edit_collection_path(@collection), method: :get %>
+<%= button_to "Edit", edit_collection_path(@collection), method: :get %><br>
 
-<%= button_to "Delete", "/collections/#{@collection.id}", method: :delete %>
+<%= button_to "Delete", "/collections/#{@collection.id}", method: :delete %><br>
+
+<%= link_to "Back to Collections", collections_path %>

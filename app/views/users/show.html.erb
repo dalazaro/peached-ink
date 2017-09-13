@@ -1,7 +1,10 @@
 <h1>About <%= @user.first_name %></h1>
-First name: <%= @user.first_name %><br>
-Last name: <%= @user.last_name %><br>
+<h2>(pronounced ɡɛn)</h2>
+Name: <%= "#{@user.first_name} #{@user.last_name}" %><br>
 Email: <%= @user.email_address %><br>
 Bio: <%= @user.bio %><br>
 Artist Statement: <%= @user.artist_statement %><br>
 <%= button_to "Edit Profile", edit_user_path(@user.username), method: :get %>
+<% if current_user %>
+  <%= link_to "Log Out", logout_path %>
+<% end %>
