@@ -9,12 +9,23 @@
   </head>
 
   <body>
+  <div>
     peached.ink
     <br>
     <%= link_to "Collections", collections_path %><br>
     <%= link_to "About", user_path %><br>
     <%= link_to "Contact", "mailto:keansaetern@gmail.com" %><br>
     <%= link_to "Instagram", "https://www.instagram.com/peached.ink" %>
+  </div>
+
+  <div>
+    <% flash.each do |key, value| %>
+      <div class="center">
+        <%= value %>
+      </div>
+    <% end %>
+  </div>
+  
     <%= yield %>
   </body>
 </html>

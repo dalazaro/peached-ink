@@ -7,7 +7,13 @@ class UsersController < ApplicationController
 
   # get '/users/:username/edit', to: 'users#edit', as: 'edit_user'
   def edit
-    @user = User.find_by username: params[:username]
+    user = User.find_by username: params[:username]
+    if !user || user.id != session[:user_id]
+      flash[:error] = "You are not authorized to edit this information."
+      redirect_to user_path
+    else
+      @user = User.find_by username: params[:username]
+    end
   end
 
   # patch '/users/:username', to: 'users#update', as: 'update_user'
