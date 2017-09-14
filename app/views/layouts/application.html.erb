@@ -15,7 +15,7 @@
     <%= link_to "Collections", collections_path %><br>
     <%= link_to "About", user_path %><br>
     <%= link_to "Contact", "mailto:keansaetern@gmail.com" %><br>
-    <%= link_to "Instagram", "https://www.instagram.com/peached.ink" %>
+    <%= link_to "Instagram", "https://www.instagram.com/peached.ink", :target => "_blank" %>
   </div>
 
   <div>
@@ -25,7 +25,7 @@
       </div>
     <% end %>
   </div>
-  
+
     <%= yield %>
   </body>
 </html>
