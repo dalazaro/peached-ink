@@ -13,7 +13,7 @@
   <% @collections.each do |collection| %>
     <li>
       <%= link_to collection.name, collection_path(collection.slug) %><br>
-      <%= collection.description %>
+      <%= (collection.description).gsub("\r\n", "<br>").html_safe %>
     </li>
   <% end %>
 <% end %>
