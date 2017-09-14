@@ -7,6 +7,7 @@ Name: <%= "#{@user.first_name} #{@user.last_name}" %><br>
 Email: <%= @user.email_address %><br>
 Bio: <%= h(@user.bio).gsub("\r\n", "<br>").html_safe %><br>
 Artist Statement: <%= @user.artist_statement %><br>
+<%= image_tag(@user.avatar.url, :width=>200) if @user.avatar? %>
 <% if is_owner %>
   <%= button_to "Edit Profile", edit_user_path(@user.username), method: :get %>
   <%= link_to "Log Out", logout_path %>
