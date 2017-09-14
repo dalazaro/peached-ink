@@ -1,3 +1,15 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  root to: 'application#home'
+
+  get '/about', to: 'users#show', as: 'user'
+  get '/users/:username/edit', to: 'users#edit', as: 'edit_user'
+  patch '/users/:username', to: 'users#update', as: 'update_user'
+
+  get '/login', to: 'sessions#new'
+  post '/sessions', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
+
+  resources :collections
+
 end

@@ -1,0 +1,19 @@
+<% user = current_user %>
+<% is_owner = user ? user.id == @user.id : false %>
+
+<h1>Collections</h1>
+
+<% if is_owner %>
+<%= button_to "New Collection", new_collection_path, method: :get %><br>
+<% end %>
+
+<% if @collections.length == 0 %>
+  No collections to show yet!
+<% else %>
+  <% @collections.each do |collection| %>
+    <li>
+      <%= link_to collection.name, collection_path(collection.slug) %><br>
+      <%= collection.description %>
+    </li>
+  <% end %>
+<% end %>
