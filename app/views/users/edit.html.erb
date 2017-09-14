@@ -1,10 +1,12 @@
 <h1>Edit Profile</h1>
 
-<%= form_for @user, url:update_user_path(@user.username) do |f| %>
+<%= form_for @user, url: update_user_path(@user.username) do |f| %>
   First name: <%= f.text_field :first_name %><br>
   Last name: <%= f.text_field :last_name %><br>
   Email: <%= f.email_field :email_address %><br>
   Artist Statement: <%= f.text_area :artist_statement %><br>
   Bio: <%= f.text_area :bio %><br>
+  Avatar: <%= f.file_field :avatar %><br>
+  <%= image_tag(@user.avatar_url, :width=>200) if @user.avatar? %><br>
   <%= f.submit "Save Changes" %>
 <% end %>
