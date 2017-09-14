@@ -31,7 +31,7 @@ class CollectionsController < ApplicationController
 
   # get '/collections/:collection_id/edit', to: 'collections#edit', as: 'edit_collection'
   def edit
-    @collection = Collection.find_by_id(params[:id])
+    @collection = Collection.find (params[:id])
     if @collection.user_id != session[:user_id]
       flash[:error] = 'You are not authorized to edit this collection.'
       redirect_to collection_path(params[:id])
@@ -40,7 +40,7 @@ class CollectionsController < ApplicationController
 
   # patch '/collections/:collection_id', to: 'collections#update', as: 'update_collection'
   def update
-    collection = Collection.find_by_id(params[:id])
+    collection = Collection.find (params[:id])
     if collection.user_id != session[:user_id]
       flash[:error] = 'You are not authorized to edit this collection.'
     else
@@ -51,7 +51,7 @@ class CollectionsController < ApplicationController
 
   # delete '/collections/:collection_id', to: 'collections#destroy'
   def destroy
-    collection = Collection.find_by_id(params[:id])
+    collection = Collection.find (params[:id])
     if collection.user_id != session[:user_id]
       flash[:error] = 'You are not authorized to delete this collection.'
       redirect_to collection_path
