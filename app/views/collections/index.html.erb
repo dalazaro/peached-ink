@@ -12,7 +12,7 @@
 <% else %>
   <% @collections.each do |collection| %>
     <li>
-      <%= link_to collection.name, collection_path(collection.id) %><br>
+      <%= link_to collection.name, collection_path(collection.slug) %><br>
       <%= collection.description %>
     </li>
   <% end %>
