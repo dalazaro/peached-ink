@@ -3,7 +3,7 @@ class CollectionsController < ApplicationController
   # get '/collections', to: 'collections#index', as: 'collections'
   def index
     @user = User.find(1)
-    @collections = Collection.where user_id: @user.id
+    @collections = Collection.where(user_id: @user.id).order('id DESC')
   end
 
   # get '/collections/new', to: 'collections#new', as: 'new_collection'
@@ -26,21 +26,21 @@ class CollectionsController < ApplicationController
 
   # get '/collections/:collection_id', to: 'collections#show', as: 'collection'
   def show
-    @collection = Collection.find_by_id(params[:collection_id])
+    @collection = Collection.find (params[:id])
   end
 
   # get '/collections/:collection_id/edit', to: 'collections#edit', as: 'edit_collection'
   def edit
-    @collection = Collection.find_by_id(params[:collection_id])
+    @collection = Collection.find_by_id(params[:id])
     if @collection.user_id != session[:user_id]
       flash[:error] = 'You are not authorized to edit this collection.'
-      redirect_to collection_path(params[:collection_id])
+      redirect_to collection_path(params[:id])
     end
   end
 
   # patch '/collections/:collection_id', to: 'collections#update', as: 'update_collection'
   def update
-    collection = Collection.find_by_id(params[:collection_id])
+    collection = Collection.find_by_id(params[:id])
     if collection.user_id != session[:user_id]
       flash[:error] = 'You are not authorized to edit this collection.'
     else
@@ -51,7 +51,7 @@ class CollectionsController < ApplicationController
 
   # delete '/collections/:collection_id', to: 'collections#destroy'
   def destroy
-    collection = Collection.find_by_id(params[:collection_id])
+    collection = Collection.find_by_id(params[:id])
     if collection.user_id != session[:user_id]
       flash[:error] = 'You are not authorized to delete this collection.'
       redirect_to collection_path
