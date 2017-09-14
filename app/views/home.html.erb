@@ -1,1 +1,14 @@
+<% @user = User.find(1) %>
+<% @collections = Collection.where(user_id: @user.id).order('id DESC').limit(3) %>
+
 <p>Life captured in cute and simple art form.</p>
+
+<h2>Newest Illustration Collections</h2>
+
+<% @collections.each do |collection| %>
+  <li>
+    <%= link_to collection.name, collection_path(collection.slug) %><br>
+    <%= (collection.description).gsub("\r\n", "<br>").html_safe %><br>
+      <%= image_tag(collection.illustration01.url, :width=>200) if collection.illustration01? %>
+  </li>
+<% end %>
