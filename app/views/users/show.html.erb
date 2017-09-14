@@ -5,7 +5,7 @@
 <h2>(pronounced ɡɛn)</h2>
 Name: <%= "#{@user.first_name} #{@user.last_name}" %><br>
 Email: <%= @user.email_address %><br>
-Bio: <%= @user.bio %><br>
+Bio: <%= h(@user.bio).gsub("\r\n", "<br>").html_safe %><br>
 Artist Statement: <%= @user.artist_statement %><br>
 <% if is_owner %>
   <%= button_to "Edit Profile", edit_user_path(@user.username), method: :get %>
