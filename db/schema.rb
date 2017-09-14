@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170914072504) do
+ActiveRecord::Schema.define(version: 20170914184318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 20170914072504) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "slug"
+    t.string "illustration01"
+    t.string "illustration02"
+    t.string "illustration03"
+    t.string "illustration04"
+    t.string "illustration05"
+    t.string "illustration06"
+    t.string "illustration07"
+    t.string "illustration08"
+    t.string "illustration09"
+    t.string "illustration10"
     t.index ["user_id"], name: "index_collections_on_user_id"
   end
 
