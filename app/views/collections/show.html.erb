@@ -11,30 +11,117 @@
   <%= button_to "Delete", "/collections/#{@collection.id}", method: :delete, class: "btn" %>
 <% end %>
 
-<div>
-  <%= image_tag(@collection.illustration01.url, :width=>200) if @collection.illustration01? %>
+<!-- Carousel Slideshow -->
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <% if @collection.illustration01? %>
+      <div class="carousel-item active">
+        <%= image_tag(@collection.illustration01.url, class: "d-block w-100") %>
+      </div>
+    <% end %>
+    <% if @collection.illustration02? %>
+      <div class="carousel-item">
+        <%= image_tag(@collection.illustration02.url, class: "d-block w-100") %>
+      </div>
+    <% end %>
+    <% if @collection.illustration03? %>
+      <div class="carousel-item">
+        <%= image_tag(@collection.illustration03.url, class: "d-block w-100") %>
+      </div>
+    <% end %>
+    <% if @collection.illustration04? %>
+      <div class="carousel-item">
+        <%= image_tag(@collection.illustration04.url, class: "d-block w-100") %>
+      </div>
+    <% end %>
+    <% if @collection.illustration05? %>
+      <div class="carousel-item">
+        <%= image_tag(@collection.illustration05.url, class: "d-block w-100") %>
+      </div>
+    <% end %>
+    <% if @collection.illustration06? %>
+      <div class="carousel-item">
+        <%= image_tag(@collection.illustration06.url, class: "d-block w-100") %>
+      </div>
+    <% end %>
+    <% if @collection.illustration07? %>
+      <div class="carousel-item">
+        <%= image_tag(@collection.illustration07.url, class: "d-block w-100") %>
+      </div>
+    <% end %>
+    <% if @collection.illustration08? %>
+      <div class="carousel-item">
+        <%= image_tag(@collection.illustration08.url, class: "d-block w-100") %>
+      </div>
+    <% end %>
+    <% if @collection.illustration09? %>
+      <div class="carousel-item">
+        <%= image_tag(@collection.illustration09.url, class: "d-block w-100") %>
+      </div>
+    <% end %>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
-<div>
-  <%= image_tag(@collection.illustration02.url, :width=>200) if @collection.illustration02? %>
-</div>
-<div>
-  <%= image_tag(@collection.illustration03.url, :width=>200) if @collection.illustration03? %>
-</div>
-<div>
-  <%= image_tag(@collection.illustration04.url, :width=>200) if @collection.illustration04? %>
-</div>
-<div>
-  <%= image_tag(@collection.illustration05.url, :width=>200) if @collection.illustration05? %>
-</div>
-<div>
-  <%= image_tag(@collection.illustration06.url, :width=>200) if @collection.illustration06? %>
-</div>
-<div>
-  <%= image_tag(@collection.illustration07.url, :width=>200) if @collection.illustration07? %>
-</div>
-<div>
-  <%= image_tag(@collection.illustration08.url, :width=>200) if @collection.illustration08? %>
-</div>
-<div>
-  <%= image_tag(@collection.illustration09.url, :width=>200) if @collection.illustration09? %>
-</div>
+
+<!-- Thumbnails -->
+
+<% if @collection.illustration01? %>
+  <div>
+    <%= image_tag(@collection.illustration01.url, :width=>200) %>
+  </div>
+<% end %>
+
+<% if @collection.illustration02? %>
+  <div>
+    <%= image_tag(@collection.illustration02.url, :width=>200) %>
+  </div>
+<% end %>
+
+<% if @collection.illustration03? %>
+  <div>
+    <%= image_tag(@collection.illustration03.url, :width=>200) %>
+  </div>
+<% end %>
+
+<% if @collection.illustration04? %>
+  <div>
+    <%= image_tag(@collection.illustration04.url, :width=>200) %>
+  </div>
+<% end %>
+
+<% if @collection.illustration05? %>
+  <div>
+    <%= image_tag(@collection.illustration05.url, :width=>200) %>
+  </div>
+<% end %>
+
+<% if @collection.illustration06? %>
+  <div>
+    <%= image_tag(@collection.illustration06.url, :width=>200) %>
+  </div>
+<% end %>
+
+<% if @collection.illustration07? %>
+  <div>
+    <%= image_tag(@collection.illustration07.url, :width=>200) %>
+  </div>
+<% end %>
+
+<% if @collection.illustration08? %>
+  <div>
+    <%= image_tag(@collection.illustration08.url, :width=>200) %>
+  </div>
+<% end %>
+
+<% if @collection.illustration09? %>
+  <div>
+    <%= image_tag(@collection.illustration09.url, :width=>200) %>
+  </div>
+<% end %>
