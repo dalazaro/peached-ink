@@ -11,12 +11,30 @@
   <%= button_to "Delete", "/collections/#{@collection.id}", method: :delete, class: "btn" %>
 <% end %>
 
-<%= image_tag(@collection.illustration01.url, :width=>200) if @collection.illustration01? %><br>
-<%= image_tag(@collection.illustration02.url, :width=>200) if @collection.illustration02? %><br>
-<%= image_tag(@collection.illustration03.url, :width=>200) if @collection.illustration03? %><br>
-<%= image_tag(@collection.illustration04.url, :width=>200) if @collection.illustration04? %><br>
-<%= image_tag(@collection.illustration05.url, :width=>200) if @collection.illustration05? %><br>
-<%= image_tag(@collection.illustration06.url, :width=>200) if @collection.illustration06? %><br>
-<%= image_tag(@collection.illustration07.url, :width=>200) if @collection.illustration07? %><br>
-<%= image_tag(@collection.illustration08.url, :width=>200) if @collection.illustration08? %><br>
-<%= image_tag(@collection.illustration09.url, :width=>200) if @collection.illustration09? %><br>
+<div>
+  <%= image_tag(@collection.illustration01.url, :width=>200) if @collection.illustration01? %>
+</div>
+<div>
+  <%= image_tag(@collection.illustration02.url, :width=>200) if @collection.illustration02? %>
+</div>
+<div>
+  <%= image_tag(@collection.illustration03.url, :width=>200) if @collection.illustration03? %>
+</div>
+<div>
+  <%= image_tag(@collection.illustration04.url, :width=>200) if @collection.illustration04? %>
+</div>
+<div>
+  <%= image_tag(@collection.illustration05.url, :width=>200) if @collection.illustration05? %>
+</div>
+<div>
+  <%= image_tag(@collection.illustration06.url, :width=>200) if @collection.illustration06? %>
+</div>
+<div>
+  <%= image_tag(@collection.illustration07.url, :width=>200) if @collection.illustration07? %>
+</div>
+<div>
+  <%= image_tag(@collection.illustration08.url, :width=>200) if @collection.illustration08? %>
+</div>
+<div>
+  <%= image_tag(@collection.illustration09.url, :width=>200) if @collection.illustration09? %>
+</div>
