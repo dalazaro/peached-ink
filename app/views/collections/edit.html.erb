@@ -9,7 +9,7 @@
     <%= f.label "Description" %>
     <%= f.text_area :description %><br>
   </div>
-  
+
   Illustration #1: <%= f.file_field :illustration01 %><br>
   <%= image_tag(@collection.illustration01.url, :width=>200) if @collection.illustration01? %><br>
   Illustration #2: <%= f.file_field :illustration02 %><br>
@@ -29,5 +29,5 @@
   Illustration #9: <%= f.file_field :illustration09 %><br>
   <%= image_tag(@collection.illustration09.url, :width=>200) if @collection.illustration09? %><br>
 
-  <%= f.submit "Save" %>
+  <%= f.submit "Save", class: "button" %>
 <% end %>

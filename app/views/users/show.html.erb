@@ -5,8 +5,8 @@
 <h3>(pronounced ɡɛn)</h3>
 
 <% if is_owner %>
-  <%= button_to "Edit Profile", edit_user_path(@user.username), method: :get %>
-  <%= button_to "Log Out", logout_path, method: :get %>
+  <%= button_to "Edit Profile", edit_user_path(@user.username), method: :get, class: "button" %>
+  <%= button_to "Log Out", logout_path, method: :get, class: "button" %>
 <% end %>
 
 <%= image_tag(@user.avatar.url, :width=>200) if @user.avatar? %><br>

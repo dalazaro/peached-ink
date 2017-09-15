@@ -25,5 +25,5 @@
     Avatar: <%= f.file_field :avatar %><br>
     <%= image_tag(@user.avatar_url, :width=>200) if @user.avatar? %>
   </div>
-  <%= f.submit "Save Changes" %>
+  <%= f.submit "Save Changes", class: "button" %>
 <% end %>

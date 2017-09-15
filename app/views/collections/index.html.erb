@@ -4,7 +4,7 @@
 <h2>Collections</h2>
 
 <% if is_owner %>
-<%= button_to "New Collection", new_collection_path, method: :get %><br>
+<%= button_to "New Collection", new_collection_path, method: :get, class: "button" %><br>
 <% end %>
 
 <% if @collections.length == 0 %>
