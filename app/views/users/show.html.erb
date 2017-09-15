@@ -2,7 +2,7 @@
 <% is_owner = user ? user.id == @user.id : false %>
 
 <h2>About <%= @user.first_name %></h2>
-<h3>(pronounced ɡɛn)</h3>
+<h3>(pronounced ghen)</h3>
 
 <% if is_owner %>
   <%= button_to "Edit Profile", edit_user_path(@user.username), method: :get, class: "button" %>
