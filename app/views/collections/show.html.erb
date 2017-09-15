@@ -1,8 +1,16 @@
 <% user = current_user %>
 <% is_owner = user ? user.id == @collection.user_id : false %>
 
-<h1><%= @collection.name %></h1>
-<h2><%= (@collection.description).gsub("\r\n", "<br>").html_safe %></h2><br>
+<%= link_to "Back to Collections", collections_path %>
+
+<h2><%= @collection.name %></h2>
+<h3><%= (@collection.description).gsub("\r\n", "<br>").html_safe %></h3>
+
+<% if is_owner %>
+  <%= button_to "Edit", edit_collection_path(@collection), method: :get %><br>
+  <%= button_to "Delete", "/collections/#{@collection.id}", method: :delete %>
+<% end %>
+
 <%= image_tag(@collection.illustration01.url, :width=>200) if @collection.illustration01? %><br>
 <%= image_tag(@collection.illustration02.url, :width=>200) if @collection.illustration02? %><br>
 <%= image_tag(@collection.illustration03.url, :width=>200) if @collection.illustration03? %><br>
@@ -12,11 +20,3 @@
 <%= image_tag(@collection.illustration07.url, :width=>200) if @collection.illustration07? %><br>
 <%= image_tag(@collection.illustration08.url, :width=>200) if @collection.illustration08? %><br>
 <%= image_tag(@collection.illustration09.url, :width=>200) if @collection.illustration09? %><br>
-
-
-<% if is_owner %>
-  <%= button_to "Edit", edit_collection_path(@collection), method: :get %><br>
-  <%= button_to "Delete", "/collections/#{@collection.id}", method: :delete %>
-<% end %>
-
-<%= link_to "Back to Collections", collections_path %>

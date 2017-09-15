@@ -1,8 +1,14 @@
-<h1>New Collection</h1>
+<h2>New Collection</h2>
 
 <%= form_for @collection do |f| %>
-  Name: <%= f.text_field :name %><br>
-  Description: <%= f.text_area :description %><br>
+  <div>
+    <%= f.label "Name" %>
+    <%= f.text_field :name %><br>
+  </div>
+  <div>
+    <%= f.label "Description" %>
+    <%= f.text_area :description %><br>
+  </div>
   Illustration #1: <%= f.file_field :illustration01 %><br>
   Illustration #2: <%= f.file_field :illustration02 %><br>
   Illustration #3: <%= f.file_field :illustration03 %><br>
