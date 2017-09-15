@@ -7,8 +7,8 @@
 <h3><%= (@collection.description).gsub("\r\n", "<br>").html_safe %></h3>
 
 <% if is_owner %>
-  <%= button_to "Edit", edit_collection_path(@collection), method: :get, class: "waves-effect waves-light btn" %><br>
-  <%= button_to "Delete", "/collections/#{@collection.id}", method: :delete, class: "waves-effect waves-light btn" %>
+  <%= button_to "Edit", edit_collection_path(@collection), method: :get, class: "btn" %><br>
+  <%= button_to "Delete", "/collections/#{@collection.id}", method: :delete, class: "btn" %>
 <% end %>
 
 <%= image_tag(@collection.illustration01.url, :width=>200) if @collection.illustration01? %><br>

@@ -1,16 +1,16 @@
 <% user = current_user %>
 
-<div class="navbar-fixed z-depth-0 hide-on-med-and-up">
-  <nav class="grey darken-3">
+<div class="navbar hide-on-med-and-up">
+  <nav class="transparent z-depth-0">
     <div class="nav-wrapper container">
-      <%= link_to "peached.ink", root_path, class: "brand-logo" %>
+      <%= link_to "peached.ink", root_path, class: "brand-logo black-text" %>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><%= link_to "collections", collections_path %></li>
-        <li><%= link_to "about", user_path %></li>
-        <li><%= link_to "contact", "mailto:keansaetern@gmail.com" %></li>
-        <li><%= link_to "instagram", "https://www.instagram.com/peached.ink", :target => "_blank" %></li>
+        <li><%= link_to "collections", collections_path, class: "black-text" %></li>
+        <li><%= link_to "about", user_path, class: "black-text" %></li>
+        <li><%= link_to "contact", "mailto:keansaetern@gmail.com", class: "black-text" %></li>
+        <li><%= link_to "instagram", "https://www.instagram.com/peached.ink", :target => "_blank", class: "black-text" %></li>
         <% if user %>
-          <li><%= link_to "log out", logout_path %></li>
+          <li><%= link_to "log out", logout_path, class: "black-text" %></li>
         <% end %>
       </ul>
     </div>

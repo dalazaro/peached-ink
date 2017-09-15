@@ -10,8 +10,7 @@ h2, h3 {
 .sidenav-links {
   text-align: center;
   list-style: none;
-  margin-top: 15em;
-  border-right: 1px solid black;
+  margin-top: 15rem;
 }
 
 @media (max-width: 600px) {
