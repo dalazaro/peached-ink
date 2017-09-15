@@ -1,0 +1,11 @@
+$font-stack: 'Quicksand', sans-serif;
+$peach: #FFEEE6;
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: $font-stack;
+  background-color: $peach;
+}
+
+h2, h3 {
+  text-align: center;
+}
