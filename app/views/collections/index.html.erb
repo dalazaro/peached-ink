@@ -1,7 +1,7 @@
 <% user = current_user %>
 <% is_owner = user ? user.id == @user.id : false %>
 
-<h1>Collections</h1>
+<h2>Collections</h2>
 
 <% if is_owner %>
 <%= button_to "New Collection", new_collection_path, method: :get %><br>
@@ -11,10 +11,10 @@
   No collections to show yet!
 <% else %>
   <% @collections.each do |collection| %>
-    <li>
-      <%= link_to collection.name, collection_path(collection.slug) %><br>
-      <%= (collection.description).gsub("\r\n", "<br>").html_safe %><br>
-        <%= image_tag(collection.illustration01.url, :width=>200) if collection.illustration01? %>
-    </li>
+    <div>
+      <h4><%= link_to collection.name, collection_path(collection.slug) %></h4>
+      <h5><%= (collection.description).gsub("\r\n", "<br>").html_safe %></h5>
+      <%= image_tag(collection.illustration01.url, :width=>200) if collection.illustration01? %>
+    </div>
   <% end %>
 <% end %>

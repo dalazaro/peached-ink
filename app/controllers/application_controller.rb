@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   # root to: 'application#home'
   def home
-    render('../views/home')
+    render('../views/application/home')
   end
 
 end

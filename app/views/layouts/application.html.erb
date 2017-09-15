@@ -4,27 +4,27 @@
     <title>peached.ink | Illustrations by Kean Saetern</title>
     <%= csrf_meta_tags %>
 
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
     <%= stylesheet_link_tag    'application', media: 'all' %>
+
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
-  <div>
-    <%= link_to "peached.ink", root_path %>
-    <br>
-    <%= link_to "Collections", collections_path %><br>
-    <%= link_to "About", user_path %><br>
-    <%= link_to "Contact", "mailto:keansaetern@gmail.com" %><br>
-    <%= link_to "Instagram", "https://www.instagram.com/peached.ink", :target => "_blank" %>
-  </div>
+    <%= render partial: 'header' %>
 
-  <div>
-    <% flash.each do |key, value| %>
-      <div class="center">
-        <%= value %>
-      </div>
-    <% end %>
-  </div>
+    <div>
+      <% flash.each do |key, value| %>
+        <div class="center">
+          <%= value %>
+        </div>
+      <% end %>
+    </div>
 
     <%= yield %>
   </body>
