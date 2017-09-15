@@ -1,14 +1,16 @@
 <% user = current_user %>
 <% is_owner = user ? user.id == @user.id : false %>
 
-<h1>About <%= @user.first_name %></h1>
-<h2>(pronounced ɡɛn)</h2>
+<h2>About <%= @user.first_name %></h2>
+<h3>(pronounced ɡɛn)</h3>
+
+<% if is_owner %>
+  <%= button_to "Edit Profile", edit_user_path(@user.username), method: :get %>
+  <%= button_to "Log Out", logout_path, method: :get %>
+<% end %>
+
 <%= image_tag(@user.avatar.url, :width=>200) if @user.avatar? %><br>
 Name: <%= "#{@user.first_name} #{@user.last_name}" %><br>
 Email: <%= @user.email_address %><br>
 Bio: <%= h(@user.bio).gsub("\r\n", "<br>").html_safe %><br>
 Artist Statement: <%= @user.artist_statement %><br>
-<% if is_owner %>
-  <%= button_to "Edit Profile", edit_user_path(@user.username), method: :get %>
-  <%= link_to "Log Out", logout_path %>
-<% end %>
