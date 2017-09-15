@@ -1,18 +1,29 @@
 <% user = current_user %>
 
-<div class="navbar hide-on-med-and-up">
-  <nav class="transparent z-depth-0">
-    <div class="nav-wrapper container">
-      <%= link_to "peached.ink", root_path, class: "brand-logo black-text" %>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><%= link_to "collections", collections_path, class: "black-text" %></li>
-        <li><%= link_to "about", user_path, class: "black-text" %></li>
-        <li><%= link_to "contact", "mailto:keansaetern@gmail.com", class: "black-text" %></li>
-        <li><%= link_to "instagram", "https://www.instagram.com/peached.ink", :target => "_blank", class: "black-text" %></li>
-        <% if user %>
-          <li><%= link_to "log out", logout_path, class: "black-text" %></li>
-        <% end %>
-      </ul>
-    </div>
-  </nav>
-</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <%= link_to "peached.ink", root_path, class: "navbar-brand" %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href=<%= collections_path %>>collections</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href=<%= user_path %>>about</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="mailto:keansaetern@gmail.com">contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.instagram.com/peached.ink" target="_blank">instagram</a>
+      </li>
+      <% if user %>
+      <li class="nav-item">
+        <a class="nav-link" href=<%= logout_path %>>log out</a>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
