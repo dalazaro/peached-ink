@@ -1,8 +1,18 @@
-<div>
-  <%= link_to "peached.ink", root_path %>
-  <br>
-  <%= link_to "Collections", collections_path %><br>
-  <%= link_to "About", user_path %><br>
-  <%= link_to "Contact", "mailto:keansaetern@gmail.com" %><br>
-  <%= link_to "Instagram", "https://www.instagram.com/peached.ink", :target => "_blank" %>
+<% user = current_user %>
+
+<div class="navbar-fixed z-depth-0 hide-on-med-and-up">
+  <nav class="grey darken-3">
+    <div class="nav-wrapper container">
+      <%= link_to "peached.ink", root_path, class: "brand-logo" %>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><%= link_to "collections", collections_path %></li>
+        <li><%= link_to "about", user_path %></li>
+        <li><%= link_to "contact", "mailto:keansaetern@gmail.com" %></li>
+        <li><%= link_to "instagram", "https://www.instagram.com/peached.ink", :target => "_blank" %></li>
+        <% if user %>
+          <li><%= link_to "log out", logout_path %></li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
 </div>

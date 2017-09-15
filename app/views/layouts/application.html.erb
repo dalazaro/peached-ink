@@ -24,6 +24,15 @@
       <% end %>
     </div>
 
-    <%= yield %>
+    <div class="row">
+      <div class="col m4 desktop-only">
+        <%= render partial: 'sidenav' %>
+      </div>
+      <div class="col m8">
+        <div class="container">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
