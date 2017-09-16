@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
   # patch '/users/:username', to: 'users#update', as: 'update_user'
   def update
-    user_params = params.require(:user).permit(:first_name, :last_name, :bio, :email, :artist_statement, :avatar)
+    user_params = params.require(:user).permit(:first_name, :last_name, :bio, :email_address, :artist_statement, :avatar)
     user = User.find_by username: params[:username]
     user.update_attributes(user_params)
     redirect_to user_path

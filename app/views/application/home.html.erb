@@ -1,14 +1,20 @@
 <% @user = User.find(1) %>
 <% @collections = Collection.where(user_id: @user.id).order('id DESC').limit(3) %>
 
-<h2>Life captured in cute and simple art form.</h2>
+<h2>Life captured in cute and colorful art form.</h2>
 
-<h3>Newest Illustration Collections</h3>
+<h2>Newest Illustration Collections</h2>
 
-<% @collections.each do |collection| %>
-  <div>
-    <h4><%= link_to collection.name, collection_path(collection.slug) %></h4>
-    <h5><%= (collection.description).gsub("\r\n", "<br>").html_safe %></h5>
-    <%= image_tag(collection.illustration01.url, :width=>200) if collection.illustration01? %>
-  </div>
-<% end %>
+<div class="row">
+  <% @collections.each do |collection| %>
+    <div class="col-md-4 text-center image">
+      <a href=<%= collection_path(collection.slug) %>>
+        <%= image_tag(collection.illustration01.url, class: "img-fluid img-thumbnail") if collection.illustration01? %>
+      </a>
+      <div class="content-padding">
+        <h4><%= link_to collection.name, collection_path(collection.slug) %></h4>
+        <h5><%= (collection.description).gsub("\r\n", "<br>").html_safe %></h5>
+      </div>
+    </div>
+  <% end %>
+</div>

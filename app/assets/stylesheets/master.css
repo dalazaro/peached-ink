@@ -1,20 +1,68 @@
+body {
+  text-align: center;
+}
+
+.navcase {
+  text-transform: lowercase;
+  font-size: 1.25em;
+}
+
+.navbar-brand {
+  font-size: 1.5em;
+}
+
+.message, .stat, .back-to {
+  text-transform: uppercase;
+}
+
+.component {
+  margin-top: 20px;
+}
+
 body, h1, h2, h3, h4, h5, h6 {
   font-family: 'Quicksand', sans-serif;
   background-color: #FFEEE6;
 }
 
 h2, h3 {
-  text-align: center;
+  padding: 10px 0;
+  margin: 0;
 }
 
-.sidenav-links {
-  text-align: center;
-  list-style: none;
-  margin-top: 15rem;
+h4, h5 {
+  font-size: 1.25em;
 }
 
-@media (max-width: 600px) {
-  .desktop-only {
-    display:none !important;
+h3 {
+  font-size: 1.25rem;
+}
+
+h2, h3, .bold {
+  font-weight: 900;
+}
+
+.image {
+  padding: 10px;
+}
+
+.carousel {
+  margin: auto;
+}
+
+@media (min-width: 992px) {
+  .carousel {
+    width: 75%;
   }
+}
+
+.content-padding {
+  padding: 20px 0;
+}
+
+.bio {
+  font-size: 1.25em;
+}
+
+.footer {
+  margin-bottom: 20px;
 }

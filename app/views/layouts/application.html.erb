@@ -4,6 +4,9 @@
     <title>peached.ink | Illustrations by Kean Saetern</title>
     <%= csrf_meta_tags %>
 
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -17,22 +20,17 @@
   <body>
     <%= render partial: 'header' %>
 
-    <div>
+    <div class="component">
       <% flash.each do |key, value| %>
-        <div class="center">
-          <%= value %>
-        </div>
+        <h5 class="message"><%= value %></h5>
       <% end %>
     </div>
 
-      <!-- <div class="col m4 desktop-only">
-        <%= render partial: 'sidenav' %>
-      </div> -->
-      <div class="container">
-        <div class="col-lg-2-offset-2 col-md-8-offset-2 col-sm-12">
-          <%= yield %>
-        </div>
-      </div>
+    <div class="component container">
+      <%= yield %>
+    </div>
+
+    <%= render partial: 'footer' %>
 
   </body>
 </html>
