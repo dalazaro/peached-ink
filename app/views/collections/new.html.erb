@@ -1,22 +1,3 @@
 <h2>New Collection</h2>
 
-<%= form_for @collection do |f| %>
-  <div>
-    <%= f.label "Name" %>
-    <%= f.text_field :name %><br>
-  </div>
-  <div>
-    <%= f.label "Description" %>
-    <%= f.text_area :description %><br>
-  </div>
-  Illustration #1: <%= f.file_field :illustration01 %><br>
-  Illustration #2: <%= f.file_field :illustration02 %><br>
-  Illustration #3: <%= f.file_field :illustration03 %><br>
-  Illustration #4: <%= f.file_field :illustration04 %><br>
-  Illustration #5: <%= f.file_field :illustration05 %><br>
-  Illustration #6: <%= f.file_field :illustration06 %><br>
-  Illustration #7: <%= f.file_field :illustration07 %><br>
-  Illustration #8: <%= f.file_field :illustration08 %><br>
-  Illustration #9: <%= f.file_field :illustration09 %><br>
-  <%= f.submit "Submit" %>
-<% end %>
+<%= render partial: 'collection-form' %>

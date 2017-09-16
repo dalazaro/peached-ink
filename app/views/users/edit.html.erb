@@ -1,29 +1,54 @@
 <h2>Edit Profile</h2>
 
-<%= form_for @user, url: update_user_path(@user.username) do |f| %>
-  <div>
-    <%= f.label "First Name" %>
-    <%= f.text_field :first_name %>
-  </div>
-  <div>
-    <%= f.label "Last Name" %>
-    <%= f.text_field :last_name %>
-  </div>
-  <div>
-    <%= f.label "Email" %>
-    <%= f.email_field :email_address %>
-  </div>
-  <div>
-    <%= f.label "Artist Statement" %>
-    <%= f.text_area :artist_statement %>
-  </div>
-  <div>
-    <%= f.label "Bio" %>
-    <%= f.text_area :bio %>
-  </div>
-  <div>
-    Avatar: <%= f.file_field :avatar %><br>
-    <%= image_tag(@user.avatar_url, :width=>200) if @user.avatar? %>
-  </div>
-  <%= f.submit "Save Changes" %>
-<% end %>
+<div class="content-padding">
+
+  <%= form_for @user, url: update_user_path(@user.username) do |f| %>
+    <div class="row">
+
+      <div class="container">
+
+        <div class="col-md-8 float-right">
+          <div class="row">
+            <div class="form-group col-md-6">
+              <%= f.label "First Name", class: "stat" %>
+              <%= f.text_field :first_name, class: "form-control" %>
+            </div>
+            <div class="form-group col-md-6">
+              <%= f.label "Last Name", class: "stat" %>
+              <%= f.text_field :last_name, class: "form-control" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label "Email", class: "stat" %>
+            <%= f.email_field :email_address, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label "Artist Statement", class: "stat" %>
+            <%= f.text_area :artist_statement, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label "Bio", class: "stat" %>
+            <%= f.text_area :bio, class: "form-control", rows: "10" %>
+          </div>
+        </div>
+
+        <div class="col-md-4 float-left image">
+          <p><%= f.label "Change Profile Picture", class: "stat" %></p>
+          <div class="form-group">
+            <%= f.file_field :avatar, class: "form-control-file" %>
+          </div>
+          <%= image_tag(@user.avatar_url, class: "img-fluid img-thumbnail") if @user.avatar? %>
+        </div>
+
+
+      </div>
+
+      <div class="mx-auto content-padding">
+        <%= f.submit "Save Changes", class: "btn btn-primary btn-lg" %>
+      </div>
+
+    </div>
+
+  <% end %>
+
+</div>
