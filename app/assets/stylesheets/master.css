@@ -21,6 +21,7 @@ body {
 
 .navbar-brand {
   font-size: 2.5em;
+  padding-left: 10px;
 }
 
 .message, .stat, .back-to {
@@ -32,7 +33,11 @@ body {
 }
 
 body, h1, h2, h3, h4, h5, h6 {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Questrial', sans-serif;
+}
+
+h2 {
+  font-family: 'Limelight', cursive;
 }
 
 h2, h3 {
@@ -50,6 +55,10 @@ h3 {
 
 h2, h3, .bold {
   font-weight: 900;
+}
+
+.statement {
+  font-size: 1.5em;
 }
 
 .image {
