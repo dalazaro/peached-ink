@@ -1,9 +1,9 @@
 <% @user = User.find(1) %>
 <% @collections = Collection.where(user_id: @user.id).order('id DESC').limit(3) %>
 
-<h2>Life captured in cute and colorful art form.</h2>
+<h2 class="statement"><%= @user.artist_statement %></h2>
 
-<h2>Newest Illustration Collections</h2>
+<h2>Recent Illustrations</h2>
 
 <div class="row">
   <% @collections.each do |collection| %>
