@@ -18,7 +18,7 @@
           </a>
           <div class="content-padding">
             <h4><%= link_to collection.name, collection_path(collection.slug) %></h4>
-            <h5><%= (collection.description).gsub("\r\n", "<br>").html_safe %></h5>            
+            <h5><%= (collection.description).gsub("\r\n", "<br>").html_safe %></h5>
           </div>
         </div>
       <% end %>

@@ -1,5 +1,17 @@
 body {
   text-align: center;
+  background-color: #FFEEE6;
+}
+
+@font-face {
+  font-family: 'Carolyna Pro Black';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Carolyna Pro Black'), url('/fonts/carolyna-pro-black.woff') format('woff');
+}
+
+.custom-font {
+  font-family: 'Carolyna Pro Black';
 }
 
 .navcase {
@@ -8,7 +20,7 @@ body {
 }
 
 .navbar-brand {
-  font-size: 1.5em;
+  font-size: 2.5em;
 }
 
 .message, .stat, .back-to {
@@ -21,7 +33,6 @@ body {
 
 body, h1, h2, h3, h4, h5, h6 {
   font-family: 'Quicksand', sans-serif;
-  background-color: #FFEEE6;
 }
 
 h2, h3 {
@@ -57,6 +68,10 @@ h2, h3, .bold {
 
 .content-padding {
   padding: 20px 0;
+}
+
+.modal {
+  margin-top: 100px;
 }
 
 .bio {
