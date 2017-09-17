@@ -10,7 +10,7 @@
   <% @collections.each do |collection| %>
     <div class="col-md-4 text-center image">
       <a href=<%= collection_path(collection.slug) %>>
-        <%= image_tag(collection.illustration01.url, class: "img-fluid img-thumbnail") if collection.illustration01? %>
+        <%= image_tag(collection.illustration01, class: "img-fluid img-thumbnail") if collection.illustration01? %>
       </a>
       <div class="content-padding">
         <h4><%= link_to collection.name, collection_path(collection.slug) %></h4>
