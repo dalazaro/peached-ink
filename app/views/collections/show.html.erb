@@ -1,7 +1,7 @@
 <% user = current_user %>
 <% is_owner = user ? user.id == @collection.user_id : false %>
 
-<div class="">
+<div class="component container">
 
   <%= link_to "Back to Collections", collections_path, class: "back-to" %>
 

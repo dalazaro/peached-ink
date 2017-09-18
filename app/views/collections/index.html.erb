@@ -1,26 +1,28 @@
 <% user = current_user %>
 <% is_owner = user ? user.id == @user.id : false %>
 
-<h2>Collections</h2>
+<div class="component container">
+  <h2>Collections</h2>
 
-<% if is_owner %>
-<%= button_to "New Collection", new_collection_path, method: :get, class: "btn btn-primary" %><br>
-<% end %>
+  <% if is_owner %>
+  <%= button_to "New Collection", new_collection_path, method: :get, class: "btn btn-primary" %><br>
+  <% end %>
 
-<% if @collections.length == 0 %>
-  No collections to show yet!
-<% else %>
-    <div class="row">
-      <% @collections.each do |collection| %>
-        <div class="col-sm-4 text-center image">
-          <a href=<%= collection_path(collection.slug) %>>
-            <%= image_tag(collection.illustration01, class: "img-fluid img-thumbnail") if collection.illustration01? %>
-          </a>
-          <div class="content-padding">
-            <h4><%= link_to collection.name, collection_path(collection.slug) %></h4>
-            <h5><%= (collection.description).gsub("\r\n", "<br>").html_safe %></h5>
+  <% if @collections.length == 0 %>
+    No collections to show yet!
+  <% else %>
+      <div class="row">
+        <% @collections.each do |collection| %>
+          <div class="col-sm-4 text-center image">
+            <a href=<%= collection_path(collection.slug) %>>
+              <%= image_tag(collection.illustration01, class: "img-fluid img-thumbnail") if collection.illustration01? %>
+            </a>
+            <div class="content-padding">
+              <h4><%= link_to collection.name, collection_path(collection.slug) %></h4>
+              <h5><%= (collection.description).gsub("\r\n", "<br>").html_safe %></h5>
+            </div>
           </div>
-        </div>
-      <% end %>
-    </div>
-<% end %>
+        <% end %>
+      </div>
+  <% end %>
+</div>

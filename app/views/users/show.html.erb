@@ -1,24 +1,26 @@
 <% user = current_user %>
 <% is_owner = user ? user.id == @user.id : false %>
 
-<h2>About <%= @user.first_name %></h2>
-<h3 class="text-muted">(pronounced ghen)</h3>
+<div class="component container">
+  <h2>About <%= @user.first_name %></h2>
+  <h3 class="text-muted">(pronounced ghen)</h3>
 
-<% if is_owner %>
-  <%= button_to "Edit Profile", edit_user_path(@user.username), method: :get, class: "btn btn-warning" %>
-<% end %>
+  <% if is_owner %>
+    <%= button_to "Edit Profile", edit_user_path(@user.username), method: :get, class: "btn btn-warning" %>
+  <% end %>
 
 
-<div class="row content-padding">
+  <div class="row content-padding">
 
-  <div class="col-md-4 image">
-    <%= image_tag(@user.avatar.url, class: "img-fluid img-thumbnail") if @user.avatar? %>
+    <div class="col-md-4 image">
+      <%= image_tag(@user.avatar.url, class: "img-fluid img-thumbnail") if @user.avatar? %>
+    </div>
+
+    <div class="col-md-8 bio">
+      <p><span class="stat">Peached.Ink is</span><br><%= "#{@user.first_name} #{@user.last_name}" %></p>
+      <p><span class="stat">Artist Statement</span><br><%= @user.artist_statement %></p>
+      <p><span class="stat">Bio</span><br><%= h(@user.bio).gsub("\r\n", "<br>").html_safe %></p>
+    </div>
+
   </div>
-
-  <div class="col-md-8 bio">
-    <p><span class="stat">Peached.Ink is</span><br><%= "#{@user.first_name} #{@user.last_name}" %></p>
-    <p><span class="stat">Artist Statement</span><br><%= @user.artist_statement %></p>
-    <p><span class="stat">Bio</span><br><%= h(@user.bio).gsub("\r\n", "<br>").html_safe %></p>
-  </div>
-
 </div>
