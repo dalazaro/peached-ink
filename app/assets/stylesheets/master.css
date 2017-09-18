@@ -21,7 +21,7 @@ body {
 
 .navbar-brand {
   font-size: 2.5em;
-  padding-left: 10px;
+  padding-left: 15px;
 }
 
 .message, .stat, .back-to {
@@ -89,4 +89,8 @@ h2, h3, .bold {
 
 .footer {
   margin-bottom: 20px;
+}
+
+.favicon {
+  height: 60px;
 }
