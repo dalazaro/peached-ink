@@ -10,7 +10,7 @@
   <h2>Recent Illustrations</h2>
   <h2 class="statement"><%= link_to "View All Collections", collections_path %></h2>
 
-  <div class="row">
+  <div class="row container">
     <% @collections.each do |collection| %>
       <div class="col-md-4 text-center image">
         <a href=<%= collection_path(collection.slug) %>>
