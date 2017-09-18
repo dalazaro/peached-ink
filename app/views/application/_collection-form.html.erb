@@ -14,43 +14,53 @@
     <div class="row">
       <div class="col-6 col-md-3 image">
         <%= f.label "Illustration #1:" %><br>
-        <%= f.file_field :illustration01 %><br>
-        <%= image_tag(@collection.illustration01.url, class: "img-fluid img-thumbnail") if @collection.illustration01? %>
+        <%= f.text_field :illustration01, class: "form-control" %><br>
+        <%= image_tag(@collection.illustration01, class: "img-fluid img-thumbnail") if @collection.illustration01? %>
       </div>
       <div class="col-6 col-md-3 image">
         <%= f.label "Illustration #2:" %><br>
-        <%= f.file_field :illustration02 %><br>
-        <%= image_tag(@collection.illustration02.url, class: "img-fluid img-thumbnail") if @collection.illustration02? %>
+        <%= f.text_field :illustration02, class: "form-control" %><br>
+        <%= image_tag(@collection.illustration02, class: "img-fluid img-thumbnail") if @collection.illustration02? %>
       </div>
       <div class="col-6 col-md-3 image">
         <%= f.label "Illustration #3:" %><br>
-        <%= f.file_field :illustration03 %><br>
-        <%= image_tag(@collection.illustration03.url, class: "img-fluid img-thumbnail") if @collection.illustration03? %>
+        <%= f.text_field :illustration03, class: "form-control" %><br>
+        <%= image_tag(@collection.illustration03, class: "img-fluid img-thumbnail") if @collection.illustration03? %>
       </div>
       <div class="col-6 col-md-3 image">
         <%= f.label "Illustration #4:" %><br>
-        <%= f.file_field :illustration04 %><br>
-        <%= image_tag(@collection.illustration04.url, class: "img-fluid img-thumbnail") if @collection.illustration04? %>
+        <%= f.text_field :illustration04, class: "form-control" %><br>
+        <%= image_tag(@collection.illustration04, class: "img-fluid img-thumbnail") if @collection.illustration04? %>
       </div>
       <div class="col-6 col-md-3 image">
         <%= f.label "Illustration #5:" %><br>
-        <%= f.file_field :illustration05 %><br>
-        <%= image_tag(@collection.illustration05.url, class: "img-fluid img-thumbnail") if @collection.illustration05? %>
+        <%= f.text_field :illustration05, class: "form-control" %><br>
+        <%= image_tag(@collection.illustration05, class: "img-fluid img-thumbnail") if @collection.illustration05? %>
       </div>
       <div class="col-6 col-md-3 image">
         <%= f.label "Illustration #6:" %><br>
-        <%= f.file_field :illustration06 %><br>
-        <%= image_tag(@collection.illustration06.url, class: "img-fluid img-thumbnail") if @collection.illustration06? %>
+        <%= f.text_field :illustration06, class: "form-control" %><br>
+        <%= image_tag(@collection.illustration06, class: "img-fluid img-thumbnail") if @collection.illustration06? %>
       </div>
       <div class="col-6 col-md-3 image">
         <%= f.label "Illustration #7:" %><br>
-        <%= f.file_field :illustration07 %><br>
-        <%= image_tag(@collection.illustration07.url, class: "img-fluid img-thumbnail") if @collection.illustration07? %>
+        <%= f.text_field :illustration07, class: "form-control" %><br>
+        <%= image_tag(@collection.illustration07, class: "img-fluid img-thumbnail") if @collection.illustration07? %>
       </div>
       <div class="col-6 col-md-3 image">
         <%= f.label "Illustration #8:" %><br>
-        <%= f.file_field :illustration08 %><br>
-        <%= image_tag(@collection.illustration08.url, class: "img-fluid img-thumbnail") if @collection.illustration08? %>
+        <%= f.text_field :illustration08, class: "form-control" %><br>
+        <%= image_tag(@collection.illustration08, class: "img-fluid img-thumbnail") if @collection.illustration08? %>
+      </div>
+      <div class="col-6 col-md-3 image">
+        <%= f.label "Illustration #9:" %><br>
+        <%= f.text_field :illustration09, class: "form-control" %><br>
+        <%= image_tag(@collection.illustration09, class: "img-fluid img-thumbnail") if @collection.illustration09? %>
+      </div>
+      <div class="col-6 col-md-3 image">
+        <%= f.label "Illustration #10:" %><br>
+        <%= f.text_field :illustration10, class: "form-control" %><br>
+        <%= image_tag(@collection.illustration10, class: "img-fluid img-thumbnail") if @collection.illustration10? %>
       </div>
     </div>
 

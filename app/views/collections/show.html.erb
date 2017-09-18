@@ -17,7 +17,6 @@
         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteConfirm">
           Delete
         </button>
-        <!-- <%= button_to "Delete", "/collections/#{@collection.id}", method: :delete, class: "btn btn-danger" %> -->
       </div>
     </div>
   <% end %>
@@ -28,47 +27,52 @@
       <div class="carousel-inner">
         <% if @collection.illustration01? %>
           <div class="carousel-item active">
-            <%= image_tag(@collection.illustration01.url, class: "d-block w-100") %>
+            <%= image_tag(@collection.illustration01, class: "img-fluid img-thumbnail") if @collection.illustration01? %>
           </div>
         <% end %>
         <% if @collection.illustration02? %>
           <div class="carousel-item">
-            <%= image_tag(@collection.illustration02.url, class: "d-block w-100") %>
+            <%= image_tag(@collection.illustration02, class: "img-fluid img-thumbnail") if @collection.illustration02? %>
           </div>
         <% end %>
         <% if @collection.illustration03? %>
           <div class="carousel-item">
-            <%= image_tag(@collection.illustration03.url, class: "d-block w-100") %>
+            <%= image_tag(@collection.illustration03, class: "img-fluid img-thumbnail") if @collection.illustration03? %>
           </div>
         <% end %>
         <% if @collection.illustration04? %>
           <div class="carousel-item">
-            <%= image_tag(@collection.illustration04.url, class: "d-block w-100") %>
+            <%= image_tag(@collection.illustration04, class: "img-fluid img-thumbnail") if @collection.illustration04? %>
           </div>
         <% end %>
         <% if @collection.illustration05? %>
           <div class="carousel-item">
-            <%= image_tag(@collection.illustration05.url, class: "d-block w-100") %>
+            <%= image_tag(@collection.illustration05, class: "img-fluid img-thumbnail") if @collection.illustration05? %>
           </div>
         <% end %>
         <% if @collection.illustration06? %>
           <div class="carousel-item">
-            <%= image_tag(@collection.illustration06.url, class: "d-block w-100") %>
+            <%= image_tag(@collection.illustration06, class: "img-fluid img-thumbnail") if @collection.illustration06? %>
           </div>
         <% end %>
         <% if @collection.illustration07? %>
           <div class="carousel-item">
-            <%= image_tag(@collection.illustration07.url, class: "d-block w-100") %>
+            <%= image_tag(@collection.illustration07, class: "img-fluid img-thumbnail") if @collection.illustration07? %>
           </div>
         <% end %>
         <% if @collection.illustration08? %>
           <div class="carousel-item">
-            <%= image_tag(@collection.illustration08.url, class: "d-block w-100") %>
+            <%= image_tag(@collection.illustration08, class: "img-fluid img-thumbnail") if @collection.illustration08? %>
           </div>
         <% end %>
         <% if @collection.illustration09? %>
           <div class="carousel-item">
-            <%= image_tag(@collection.illustration09.url, class: "d-block w-100") %>
+            <%= image_tag(@collection.illustration09, class: "img-fluid img-thumbnail") if @collection.illustration09? %>
+          </div>
+        <% end %>
+        <% if @collection.illustration10? %>
+          <div class="carousel-item">
+            <%= image_tag(@collection.illustration10, class: "img-fluid img-thumbnail") if @collection.illustration10? %>
           </div>
         <% end %>
       </div>
@@ -87,64 +91,37 @@
   <div class="container">
 
     <div class="row">
-      <% if @collection.illustration01? %>
-        <div class="col-6 col-md-3 image">
-          <%= image_tag(@collection.illustration01.url, class: "img-fluid img-thumbnail") %>
-        </div>
-      <% end %>
-
-      <% if @collection.illustration02? %>
-        <div class="col-6 col-md-3 image">
-          <%= image_tag(@collection.illustration02.url, class: "img-fluid img-thumbnail") %>
-        </div>
-      <% end %>
-
-      <% if @collection.illustration03? %>
-        <div class="col-6 col-md-3 image">
-          <%= image_tag(@collection.illustration03.url, class: "img-fluid img-thumbnail") %>
-        </div>
-      <% end %>
-    <!-- </div> -->
-
-    <!-- <div class="row"> -->
-      <% if @collection.illustration04? %>
-        <div class="col-6 col-md-3 image">
-          <%= image_tag(@collection.illustration04.url, class: "img-fluid img-thumbnail") %>
-        </div>
-      <% end %>
-
-      <% if @collection.illustration05? %>
-        <div class="col-6 col-md-3 image">
-          <%= image_tag(@collection.illustration05.url, class: "img-fluid img-thumbnail") %>
-        </div>
-      <% end %>
-
-      <% if @collection.illustration06? %>
-        <div class="col-6 col-md-3 image">
-          <%= image_tag(@collection.illustration06.url, class: "img-fluid img-thumbnail") %>
-        </div>
-      <% end %>
-    <!-- </div> -->
-
-    <!-- <div class="row"> -->
-      <% if @collection.illustration07? %>
-        <div class="col-6 col-md-3 image">
-          <%= image_tag(@collection.illustration07.url, class: "img-fluid img-thumbnail") %>
-        </div>
-      <% end %>
-
-      <% if @collection.illustration08? %>
-        <div class="col-6 col-md-3 image">
-          <%= image_tag(@collection.illustration08.url, class: "img-fluid img-thumbnail") %>
-        </div>
-      <% end %>
-
-      <% if @collection.illustration09? %>
-        <div class="col-6 col-md-3 image">
-          <%= image_tag(@collection.illustration09.url, class: "img-fluid img-thumbnail") %>
-        </div>
-      <% end %>
-    <!-- </div> -->
+      <div class="col-6 col-md-3 image">
+        <%= image_tag(@collection.illustration01, class: "img-fluid img-thumbnail") if @collection.illustration01? %>
+      </div>
+      <div class="col-6 col-md-3 image">
+        <%= image_tag(@collection.illustration02, class: "img-fluid img-thumbnail") if @collection.illustration02? %>
+      </div>
+      <div class="col-6 col-md-3 image">
+        <%= image_tag(@collection.illustration03, class: "img-fluid img-thumbnail") if @collection.illustration03? %>
+      </div>
+      <div class="col-6 col-md-3 image">
+        <%= image_tag(@collection.illustration04, class: "img-fluid img-thumbnail") if @collection.illustration04? %>
+      </div>
+      <div class="col-6 col-md-3 image">
+        <%= image_tag(@collection.illustration05, class: "img-fluid img-thumbnail") if @collection.illustration05? %>
+      </div>
+      <div class="col-6 col-md-3 image">
+        <%= image_tag(@collection.illustration06, class: "img-fluid img-thumbnail") if @collection.illustration06? %>
+      </div>
+      <div class="col-6 col-md-3 image">
+        <%= image_tag(@collection.illustration07, class: "img-fluid img-thumbnail") if @collection.illustration07? %>
+      </div>
+      <div class="col-6 col-md-3 image">
+        <%= image_tag(@collection.illustration08, class: "img-fluid img-thumbnail") if @collection.illustration08? %>
+      </div>
+      <div class="col-6 col-md-3 image">
+        <%= image_tag(@collection.illustration09, class: "img-fluid img-thumbnail") if @collection.illustration09? %>
+      </div>
+      <div class="col-6 col-md-3 image">
+        <%= image_tag(@collection.illustration10, class: "img-fluid img-thumbnail") if @collection.illustration10? %>
+      </div>
+    </div>
 
   </div>
 
