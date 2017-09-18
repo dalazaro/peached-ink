@@ -63,7 +63,7 @@ class CollectionsController < ApplicationController
 
   private
   def collection_params
-    params.require(:collection).permit(:name, :description, :slug, :illustration01, :illustration02, :illustration03, :illustration04, :illustration05, :illustration06, :illustration07, :illustration08, :illustration09, :illustration10)
+    params.require(:collection).permit(:name, :description, :illustration01, :illustration02, :illustration03, :illustration04, :illustration05, :illustration06, :illustration07, :illustration08, :illustration09, :illustration10)
   end
 
 end
