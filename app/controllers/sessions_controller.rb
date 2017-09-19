@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     if @user
       login(@user)
       flash[:notice] = 'Successfully logged in!'
-      redirect_to user_path
+      redirect_to collections_path
     else
       flash[:error] = 'Incorrect email or password. Please try again.'
       redirect_to login_path
