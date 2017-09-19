@@ -61,8 +61,9 @@ h2, h3, .bold {
   font-weight: 900;
 }
 
-.statement {
+.index-link {
   font-size: 1.5em;
+  font-family: 'Questrial', sans-serif;
 }
 
 .image {

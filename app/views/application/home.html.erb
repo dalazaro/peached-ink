@@ -1,6 +1,7 @@
 <% @user = User.find(1) %>
 <% @collections = Collection.where(user_id: @user.id).order('id DESC').limit(3) %>
 
+<!-- Splash image -->
 <div>
   <img src="assets/images/peachtree.png" class="img-fluid">
 </div>
@@ -8,7 +9,7 @@
 <div class="recent container">
 
   <h2>Recent Illustrations</h2>
-  <h2 class="statement"><%= link_to "View All Collections", collections_path %></h2>
+  <h2 class="index-link"><%= link_to "View All Collections", collections_path %></h2>
 
   <div class="row">
     <% @collections.each do |collection| %>
@@ -18,9 +19,10 @@
         </a>
         <div class="content-padding">
           <h4><%= link_to collection.name, collection_path(collection.slug) %></h4>
-          <h5><%= (collection.description).gsub("\r\n", "<br>").html_safe %></h5>
+          <h5><%= h(collection.description).gsub("\r\n", "<br>").html_safe %></h5>
         </div>
       </div>
     <% end %>
   </div>
+
 </div>

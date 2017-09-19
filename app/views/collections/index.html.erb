@@ -2,10 +2,11 @@
 <% is_owner = user ? user.id == @user.id : false %>
 
 <div class="component container">
+
   <h2>Collections</h2>
 
   <% if is_owner %>
-  <%= button_to "New Collection", new_collection_path, method: :get, class: "btn btn-primary" %><br>
+    <%= button_to "New Collection", new_collection_path, method: :get, class: "btn btn-primary" %><br>
   <% end %>
 
   <% if @collections.length == 0 %>
@@ -19,10 +20,11 @@
             </a>
             <div class="content-padding">
               <h4><%= link_to collection.name, collection_path(collection.slug) %></h4>
-              <h5><%= (collection.description).gsub("\r\n", "<br>").html_safe %></h5>
+              <h5><%= h(collection.description).gsub("\r\n", "<br>").html_safe %></h5>
             </div>
           </div>
         <% end %>
       </div>
   <% end %>
+
 </div>
