@@ -1,5 +1,4 @@
-# peached.ink
-## [www.peachedink.com](https://www.peachedink.com)
+# peached.ink [(www.peachedink.com)](https://www.peachedink.com)
 
 ## A paragraph-long description (elevator pitch) of your project.
 
@@ -44,27 +43,27 @@ Another user of this portfolio is the illustrator, acting as administrator for m
 
 ## Wireframes
 
-Splash:
+Splash:<br>
 <a href="https://trello-attachments.s3.amazonaws.com/59b6fec42a7255bf38590f00/59b71e8eec313a35bfe4569f/b962dba3c7b4a44cce98fd68ea3cb458/photo.jpg">
   <img src="https://trello-attachments.s3.amazonaws.com/59b6fec42a7255bf38590f00/59b71e8eec313a35bfe4569f/b962dba3c7b4a44cce98fd68ea3cb458/photo.jpg" width="300">
 </a>
 
-About:
+About:<br>
 <a href="https://trello-attachments.s3.amazonaws.com/59b6fec42a7255bf38590f00/59b71e93b366f7ee9acaf639/d9f444faeadcf7447a2cfe22287a3519/photo.jpg">
   <img src="https://trello-attachments.s3.amazonaws.com/59b6fec42a7255bf38590f00/59b71e93b366f7ee9acaf639/d9f444faeadcf7447a2cfe22287a3519/photo.jpg" width="300">
 </a>
 
-Collections:
+All Collections:<br>
 <a href="https://trello-attachments.s3.amazonaws.com/59b6fec42a7255bf38590f00/59b71e9613ccde269c568df6/89bda94eda09624e40735ffc09ac3e92/photo.jpg">
   <img src="https://trello-attachments.s3.amazonaws.com/59b6fec42a7255bf38590f00/59b71e9613ccde269c568df6/89bda94eda09624e40735ffc09ac3e92/photo.jpg" width="300">
 </a>
 
-Individual Collection show:
+Individual Collection:<br>
 <a href="https://trello-attachments.s3.amazonaws.com/59b6fec42a7255bf38590f00/59b76b5c17812169a8f89e45/b9c41ef83047254ce4fecb61befa0b9d/photo.jpg">
   <img src="https://trello-attachments.s3.amazonaws.com/59b6fec42a7255bf38590f00/59b76b5c17812169a8f89e45/b9c41ef83047254ce4fecb61befa0b9d/photo.jpg" width="300">
 </a>
 
-Create New Collection:
+Create New Collection:<br>
 <a href="https://trello-attachments.s3.amazonaws.com/59b6fec42a7255bf38590f00/59b77225b72f247d85216d36/24d3f3590cd25975e1b0c86ebd1064ec/photo.jpg">
   <img src="https://trello-attachments.s3.amazonaws.com/59b6fec42a7255bf38590f00/59b77225b72f247d85216d36/24d3f3590cd25975e1b0c86ebd1064ec/photo.jpg" width="300">
 </a>
