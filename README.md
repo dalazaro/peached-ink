@@ -1,6 +1,7 @@
-# peached.ink [(www.peachedink.com)](https://www.peachedink.com)
+# peached.ink 
+[www.peachedink.com](https://www.peachedink.com)
 
-## A paragraph-long description (elevator pitch) of your project.
+Paragraph-long Description (elevator pitch) of your project.
 
 ## Technologies
 - Ruby on Rails (Rails 5)
@@ -20,7 +21,7 @@
 3. Run `bundle install` to install dependencies.
 4. Create, migrate, and populate local database (db/seeds.rb).
 4. Run Rails server.
-5. Visit `localhost:3000 in your browser`.
+5. Visit `localhost:3000` in your browser.
 
 ## User Stories - who are your users, what do they want, and why?
 The user profile of this portfolio is twofold:
@@ -68,7 +69,7 @@ Create New Collection:<br>
   <img src="https://trello-attachments.s3.amazonaws.com/59b6fec42a7255bf38590f00/59b77225b72f247d85216d36/24d3f3590cd25975e1b0c86ebd1064ec/photo.jpg" width="300">
 </a>
 
-Login:
+Login:<br>
 <a href="https://trello-attachments.s3.amazonaws.com/59b6fec42a7255bf38590f00/59b71eb442048c0d8e514706/63f9785f7ca524e3f339fd758c410d66/photo.jpg">
   <img src="https://trello-attachments.s3.amazonaws.com/59b6fec42a7255bf38590f00/59b71eb442048c0d8e514706/63f9785f7ca524e3f339fd758c410d66/photo.jpg" width="300">
 </a>
