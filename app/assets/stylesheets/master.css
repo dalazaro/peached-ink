@@ -70,6 +70,10 @@ h2, h3, .bold {
   padding: 10px;
 }
 
+.thumb {
+  padding: 0;
+}
+
 .carousel {
   margin: auto;
 }
