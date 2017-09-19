@@ -82,7 +82,7 @@ Login:<br>
 </a>
 
 ## Future Development
-- Integrate **Imgur API** to automatically access and render new albums in the peached.ink Imgur account.
+- Integrate **Imgur API** to automatically access and render new uploads from within the peached.ink Imgur account.
 - Integrate **Mailchimp** for subscriber signup and newsletter distribution.
 - Integrate **e-commerce** for selling products/artwork.
 - In-app **contact form** for messaging.
