@@ -6,7 +6,7 @@
   <%= link_to "Back to Collections", collections_path, class: "back-to" %>
 
   <h2><%= @collection.name %></h2>
-  <h3 class="text-muted"><%= (@collection.description).gsub("\r\n", "<br>").html_safe %></h3>
+  <h3 class="text-muted"><%= h(@collection.description).gsub("\r\n", "<br>").html_safe %></h3>
 
   <% if is_owner %>
     <div class="row">
