@@ -17,7 +17,7 @@
     </div>
 
     <div class="col-md-8 bio">
-      <p><span class="stat">Peached.Ink<br>is</span><br><%= "#{@user.first_name} #{@user.last_name}" %></p>
+      <p><span class="custom-font bio-logo">peached.ink</span><br>is<br><%= "#{@user.first_name} #{@user.last_name}" %></p>
       <p><span class="stat">Artist Statement</span><br><%= @user.artist_statement %></p>
       <p><span class="stat">Bio</span><br><%= h(@user.bio).gsub("\r\n", "<br>").html_safe %></p>
     </div>
