@@ -23,7 +23,7 @@ peached.ink is an online art portfolio for hobbyist-but-aspiring children's book
 4. Run Rails server.
 5. Visit `localhost:3000` in your browser.
 
-## User Stories - who are your users, what do they want, and why?
+## User Stories
 The user profile of this portfolio is twofold:
 
 First, general users of this portfolio are people who wish to view Kean's illustrations and potentially contact her to commission her for an illustration.
