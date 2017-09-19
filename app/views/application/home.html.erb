@@ -1,6 +1,7 @@
 <% @user = User.find(1) %>
 <% @collections = Collection.where(user_id: @user.id).order('id DESC').limit(3) %>
 
+<!-- Splash image -->
 <div>
   <img src="assets/images/peachtree.png" class="img-fluid">
 </div>
@@ -23,4 +24,5 @@
       </div>
     <% end %>
   </div>
+
 </div>
