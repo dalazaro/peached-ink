@@ -6,7 +6,7 @@ peached.ink is an online art portfolio for aspiring professional children's book
 ## Technologies
 - Ruby on Rails (Rails 5)
 - PostgreSQL / Active Record
-- Bootstrap
+- Bootstrap 4
 - Heroku
 - Google Domains DNS
 - BCrypt
@@ -17,11 +17,11 @@ peached.ink is an online art portfolio for aspiring professional children's book
 - jQuery
 
 ### Installation
-1. In Terminal, run `git clone https://github.com/dalazaro/peached-ink.git`.
-2. `cd peached-ink` to enter project directory.
-3. Run `bundle install` to install dependencies locally.
-4. Create, migrate, and populate local database `rails db:create db:migrate db:seed`.
-4. `rails s` to run Rails server.
+1. In Terminal, run `$ git clone https://github.com/dalazaro/peached-ink.git`.
+2. `$ cd peached-ink` to enter project directory.
+3. Run `$ bundle install` to install dependencies locally.
+4. Create, migrate, and populate local database `$ rails db:create db:migrate db:seed`.
+4. `$ rails s` to run Rails server.
 5. Visit `localhost:3000` in your browser.
 
 ## User Stories
