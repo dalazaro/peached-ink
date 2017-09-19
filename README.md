@@ -1,7 +1,7 @@
 # peached.ink 
 [www.peachedink.com](https://www.peachedink.com)
 
-peached.ink is an online art portfolio for hobbyist-but-aspiring children's book illustrator Kean Saetern. Anybody who wishes to check Kean's work can visit this Ruby on Rails app and view slideshows of her various illustration collections, learn more about the illustrator herself, contact her via email, and connect with peached.ink on social media. Behind the scenes, Kean can log in to the app through a hidden endpoint and manage her own content, such as editing her profile information and CRUDing her own illustrations. I thought of developing this art portfolio for Kean long before WDI 39, and now that she's inspired me to follow my dream job as a web developer, I felt it was time for me to give back and bring her one step closer to hers.
+peached.ink is an online art portfolio for hobbyist-but-aspiring children's book illustrator Kean Saetern. Anybody who wishes to check Kean's work can visit this Ruby on Rails app and view slideshows of her various illustration collections, learn more about the illustrator herself, contact her via email, and connect with peached.ink on social media. Behind the scenes, Kean can log in to the app through a hidden endpoint and manage her own content, such as editing her profile information and CRUDing her own illustrations. I thought of developing this art portfolio for Kean long before WDI 39, and now that she's inspired me to follow my dream job as a web developer, it's time for me to give back and bring her one step closer to hers.
 
 ## Technologies
 - Ruby on Rails (Rails 5)
