@@ -28,11 +28,12 @@ peached.ink is an online art portfolio for aspiring professional children's book
 The user profile of this portfolio is twofold:
 
 First, general users of this portfolio are people who wish to view Kean's illustrations and potentially contact her to commission her for an illustration.
-- User lands on the Splash page and sees Kean's featured work (3 newest collections)
-- User can navigate different views in the top navigation bar: peached.ink title and logo; links to About, Illustration Collections, Contact, and Social icons
-- User can view Kean's about page with her profile photo, artist statement, bio, and commissions
-- User can view gallery page with a grid of Kean's different illustration collections
+- Users land on the Splash page and see Kean's featured work (3 newest collections)
+- Users can navigate different views in the top navigation bar: peached.ink title and logo; links to About, Illustration Collections, Contact, and Social icons
+- Users can view Kean's about page with her profile photo, artist statement, bio, and commissions
+- Users can view gallery page with a grid of Kean's different illustration collections
 - Users can click on a collection and view a slideshow, thumbnails, and details about the collection
+- Users can share different views on social media.
 - Users can contact Kean
 
 Another user of this portfolio is the illustrator, acting as administrator for maintaining her own profile.
@@ -82,8 +83,7 @@ Login:<br>
 
 ## Future Development
 - Integrate **Imgur API** to automatically access and render new albums in the peached.ink Imgur account.
-- **Sharing Icons** for Twitter, Pinterest, Facebook, Reddit
-- Integrate **Mailchimp** for subscriber signup and newsletter distribution
+- Integrate **Mailchimp** for subscriber signup and newsletter distribution.
 - Integrate **e-commerce** for selling products/artwork.
 - In-app **contact form** for messaging.
-- In-app **blogging** capability.
+- In-app **blogging** capability for Kean.
