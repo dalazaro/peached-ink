@@ -115,3 +115,7 @@ h2, h3, .bold {
 .recent {
   margin-top: 15px;
 }
+
+.button {
+  margin: 10px;
+}
