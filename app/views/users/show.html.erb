@@ -17,13 +17,8 @@
     </div>
 
     <div class="col-md-8 bio">
-<<<<<<< HEAD
       <p><span class="stat">Peached.Ink<br>is</span><br><%= "#{@user.first_name} #{@user.last_name}" %></p>
       <p><span class="stat">Artist Statement</span><br><%= @user.artist_statement %></p>
-=======
-      <p><span class="stat">Peached.Ink is</span><br><%= "#{@user.first_name} #{@user.last_name}" %></p>
-      <p><span class="stat">Artist Statement</span><br><%= h(@user.artist_statement).gsub("\r\n", "<br>").html_safe %></p>
->>>>>>> ce5f9cc97dc4ac47dbac2965a7608163437fd040
       <p><span class="stat">Bio</span><br><%= h(@user.bio).gsub("\r\n", "<br>").html_safe %></p>
     </div>
 
