@@ -4,7 +4,7 @@
 
   <div class="content-padding">
     <%= form_for @user, url: update_user_path(@user.username) do |f| %>
-      <div class="row">
+      <div class="row profile">
 
         <div class="container">
           <div class="col-md-8 float-right">
@@ -35,9 +35,9 @@
           <div class="col-md-4 float-left image">
             <p><%= f.label "Change Profile Picture", class: "stat" %></p>
             <div class="form-group">
-              <%= f.file_field :avatar, class: "form-control-file" %>
+              <%= f.text_field :avatar, class: "form-control", placeholder: "Enter image URL here..." %>
             </div>
-            <%= image_tag(@user.avatar_url, class: "img-fluid img-thumbnail") if @user.avatar? %>
+            <%= image_tag(@user.avatar, class: "img-fluid img-thumbnail") if @user.avatar? %>
           </div>
         </div>
 
